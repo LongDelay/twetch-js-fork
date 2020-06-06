@@ -1,22 +1,18 @@
-# Twetch JS SDK
+# Twetch JS SDK (LongDelay Fork)
+
+This is a fork version of twetch sdk.
 
 ## Getting Started
 
 This is a JavaScript library to interact with the Twetch API.
 The sdk can be used either as a library in your javascript, or as a command line interface (CLI).
 
-## Install via NPM
+## Develop
 
-To install as a module for use in your own javascript project, from your project's directory run:
+clone this repo, and submodules:
 
-```bash
-npm install @twetch/sdk
 ```
-
-To install as a CLI run:
-
-```bash
-npm install -g @twetch/sdk
+git clone https://github.com/LongDelay/twetch-js.git --recurse
 ```
 
 ## Authentication
@@ -37,7 +33,7 @@ Examples for popular wallets including Money Button, Relay One and Handcash will
 ## Storage
 
 The first time you use the sdk a private key will be generated and saved into a file called `.bit` at the root of your project.
-To see the path of this file run `twetch storage` after initializing the sdk.
+To see the path of this file run `./cli storage` after initializing the sdk.
 
 [Storage Documentation](docs/storage.md)
 
@@ -46,13 +42,13 @@ To see the path of this file run `twetch storage` after initializing the sdk.
 The quickest way to get started is to run the initialization command from the cli
 
 ```bash
-twetch init
+./cli init
 ```
 
 After you have completed the initialization steps you can begin using the cli. To post run the following:
 
 ```bash
-twetch post --content "Hello World from Twetch SDK"
+./cli post --content "Hello World from Twetch SDK"
 ```
 
 [CLI Documentation](docs/cli.md)
